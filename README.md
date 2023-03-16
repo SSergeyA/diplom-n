@@ -172,4 +172,8 @@
 
 ## Этапы выполнения:
 ### Создание облачной инфраструктуры
-1. Создал сервисный аккаунт и назначил ему необходимые права
+1. Создал сервисный аккаунт и назначил ему необходимые [права](https://cloud.yandex.ru/docs/iam/concepts/access-control/roles)
+ ![image](https://user-images.githubusercontent.com/93119897/225690778-659600e3-cc69-4eec-86d7-73e26971bd48.png)  
+ Создал и добавил [авторизованный ключ](https://cloud.yandex.ru/docs/cli/operations/authentication/service-account) сервисного аккаунта в профиль CLI 
+![image](https://user-images.githubusercontent.com/93119897/225693442-977cd46f-21eb-47aa-9b0c-6a4f1856c2b7.png)
+

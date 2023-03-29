@@ -169,16 +169,15 @@
 3. Ожидание моментального ответа на свой вопрос. Дипломные руководители работающие разработчики, которые занимаются, кроме преподавания, 
   своими проектами. Их время ограничено, поэтому постарайтесь задавать правильные вопросы, чтобы получать быстрые ответы :)  
 </details>
+
 ## Необходимые ссылки для сдачи задания.
 
-    Репозиторий с конфигурационными [файлами Terraform] (https://github.com/SSergeyA/diplom-n/tree/main/terraform)
-    Репозиторий с конфигурацией ansible, если был выбран способ создания Kubernetes кластера при помощи ansible.
-    Репозиторий с [Dockerfile](https://github.com/SSergeyA/dp_app/blob/main/Dockerfile) тестового приложения и ссылка на собранный [docker image.](https://hub.docker.com/r/ssergeya/dp_app/tags)
-    Репозиторий с [конфигурацией Kubernetes кластера](https://github.com/SSergeyA/diplom-n/tree/main/Kubernetes).
-    [Ссылка на тестовое приложение](http://130.193.38.198:30033/) и [веб интерфейс Grafana](http://130.193.38.198:30003) (admin/netology) с данными доступа.
-    [Jenkins](http://130.193.38.198:32000) (admin/netology)
+Репозиторий с конфигурационными [файлами Terraform](https://github.com/SSergeyA/diplom-n/tree/main/terraform)  
+Репозиторий с [Dockerfile](https://github.com/SSergeyA/dp_app/blob/main/Dockerfile) тестового приложения и ссылка на собранный [docker image.](https://hub.docker.com/r/ssergeya/dp_app/tags)  
+Репозиторий с [конфигурацией Kubernetes кластера](https://github.com/SSergeyA/diplom-n/tree/main/Kubernetes).  
+[Ссылка на тестовое приложение](http://130.193.38.198:30033/) и [веб интерфейс Grafana](http://130.193.38.198:30003) (admin/netology) с данными доступа.  
+[Jenkins](http://130.193.38.198:32000) (admin/netology)  
     
-
 
 ## Этапы выполнения:
 ### Создание облачной инфраструктуры

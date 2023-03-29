@@ -296,16 +296,15 @@ kubectl -n jenkins create secret generic sergey-local \
 Запускается job  
 ![image](https://user-images.githubusercontent.com/93119897/228536972-a899f5bc-3e19-41f5-b4cf-5a7686dc5b11.png)
 Создается образ  
-file:///home/sergey/Pictures/Screenshot%20from%202023-03-29%2015-30-37.png![image](https://user-images.githubusercontent.com/93119897/228537143-0f1e39fe-7ed1-4aa9-940b-c45370dccbfc.png)
+![image](https://user-images.githubusercontent.com/93119897/228537143-0f1e39fe-7ed1-4aa9-940b-c45370dccbfc.png)
 ##### 3. При создании тега (например, v1.0.0) происходит сборка и отправка с соответствующим label в регистр, а также деплой соответствующего Docker образа в кластер Kubernetes.  
- Создаю коммит без тега и отправляю его в репозиторий  
----
-## Что необходимо для сдачи задания?
+Создаю коммит с тегом и отправляю его в репозиторий  
+![image](https://user-images.githubusercontent.com/93119897/228537781-e17ebe87-3c68-459c-abb2-03aabeffdd52.png)
+Запускается job 
+![image](https://user-images.githubusercontent.com/93119897/228537894-e379e3fa-215b-4f28-bde3-a0f1bc2f40a2.png)
+Создается образ с тегом и деплоится
+![image](https://user-images.githubusercontent.com/93119897/228538030-b4e41544-38bb-4db7-8df1-2f20c6c91a57.png)
+Работает новая версия приложения
+![image](https://user-images.githubusercontent.com/93119897/228538181-2854fa57-426c-4aa8-ac44-53e2ed95862e.png)
 
-1. Репозиторий с конфигурационными файлами Terraform и готовность продемонстрировать создание всех ресурсов с нуля.
-2. Пример pull request с комментариями созданными atlantis'ом или снимки экрана из Terraform Cloud.
-3. Репозиторий с конфигурацией ansible, если был выбран способ создания Kubernetes кластера при помощи ansible.
-4. Репозиторий с Dockerfile тестового приложения и ссылка на собранный docker image.
-5. Репозиторий с конфигурацией Kubernetes кластера.
-6. Ссылка на тестовое приложение и веб интерфейс Grafana с данными доступа.
-7. Все репозитории рекомендуется хранить на одном ресурсе (github, gitlab)
+

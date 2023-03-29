@@ -209,8 +209,20 @@ Terraform сконфигурирован и создание инфрастру�
 
 
   
-Ожидаемый результат:
+#### Ожидаемый результат:
 
 1. Работоспособный Kubernetes кластер.
 2. В файле [`~/.kube/config`](https://github.com/SSergeyA/diplom-n/blob/main/Kubernetes/config)  находятся данные для доступа к кластеру. 
 3. Команда `kubectl get pods --all-namespaces` отрабатывает без ошибок.
+### Создание тестового приложения
+
+1. Создал отдельный [git репозиторий](https://github.com/SSergeyA/dp_app/) с простым nginx конфигом, который отдает статические данные.  
+2. Подготовил  [Dockerfile](https://github.com/SSergeyA/dp_app/blob/main/Dockerfile) для создания образа приложения.  
+![image](https://user-images.githubusercontent.com/93119897/228477958-8403596a-91f1-40b2-8401-41b3d71235c7.png)
+![image](https://user-images.githubusercontent.com/93119897/228478013-bd2a1907-dd63-4407-9313-8dda0cf053df.png)
+![image](https://user-images.githubusercontent.com/93119897/228478129-be12ef9a-59ab-4114-b3c2-5433cd20b615.png)
+
+#### Ожидаемый результат:
+
+1. Git репозиторий с тестовым приложением и [Dockerfile](https://github.com/SSergeyA/dp_app/blob/main/Dockerfile).
+2. Регистр с собранным docker image.  [DockerHub](https://hub.docker.com/repository/docker/ssergeya/dp_app/general)

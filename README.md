@@ -226,3 +226,22 @@ Terraform сконфигурирован и создание инфрастру�
 
 1. Git репозиторий с тестовым приложением и [Dockerfile](https://github.com/SSergeyA/dp_app/blob/main/Dockerfile).
 2. Регистр с собранным docker image.  [DockerHub](https://hub.docker.com/repository/docker/ssergeya/dp_app/general)
+
+### Подготовка cистемы мониторинга и деплой приложения
+
+1. Задеплоил в кластер [prometheus](https://prometheus.io/), [grafana](https://grafana.com/), [alertmanager](https://github.com/prometheus/alertmanager), [экспортер](https://github.com/prometheus/node_exporter). Воспользовался пакетом [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus)
+Склонировал к себе репозиторий. В файле grafana-service.yaml настроил  nodePort для доступа из-вне и в grafana-networkPolicy.yaml - настроил ingress
+![image](https://user-images.githubusercontent.com/93119897/228479672-b573dfdb-c901-4ecb-81f0-2119bf415014.png)
+![image](https://user-images.githubusercontent.com/93119897/228480988-2905c1d8-65c0-4c4e-929a-79552ea78e13.png)
+![image](https://user-images.githubusercontent.com/93119897/228481433-e7ac1788-3e9e-4842-8f56-693887c2963b.png)
+![image](https://user-images.githubusercontent.com/93119897/228484321-981dcbce-78f0-4672-9bd3-1c435cf90f46.png)
+
+2. Задеплоил тестовое приложение, например, [nginx](https://www.nginx.com/) сервер отдающий статическую страницу [index.html](https://github.com/SSergeyA/dp_app/blob/main/index.html). Для организации конфигурации использовал [helm charts](https://github.com/SSergeyA/dp_app/tree/main/dp_app_helm)
+![image](https://user-images.githubusercontent.com/93119897/228486631-196935fb-ef8f-49ec-a54c-fa476a49d500.png)
+![image](https://user-images.githubusercontent.com/93119897/228486697-50561e6c-69fe-43cc-a723-ce6ead9d408a.png)
+
+#### Ожидаемый результат:
+1. Git репозиторий с конфигурационными файлами для настройки Kubernetes.
+2. Http доступ к web интерфейсу grafana.
+3. Дашборды в grafana отображающие состояние Kubernetes кластера.
+4. Http доступ к тестовому приложению.

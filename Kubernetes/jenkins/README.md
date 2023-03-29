@@ -11,7 +11,7 @@
 
     # docker login -u docker-user -p password ssergeya/dp_app
     # cp ~/.docker/config.json ~
-    # kubectl -n jenkins create secret generic ssergeya/dp_app \
+    # kubectl -n jenkins create secret generic sergey-local \
      --from-file=.dockerconfigjson=config.json \
      --type=kubernetes.io/dockerconfigjson
 

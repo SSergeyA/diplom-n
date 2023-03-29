@@ -303,7 +303,7 @@ kubectl -n jenkins create secret generic sergey-local \
 ![image](https://user-images.githubusercontent.com/93119897/228523715-b92ece6c-eddf-401f-891a-b915579300d1.png)
 ![image](https://user-images.githubusercontent.com/93119897/228523746-171b457e-534f-4ee2-a944-bc6591091566.png)
 
-5. Устанавливаем GitHub Integration и создаем pipline job.   
+5. Устанавливаем GitHub Integration и создаем pipeline job.   
 
 ![image](https://user-images.githubusercontent.com/93119897/228533511-455ebd8a-e7cf-4076-8478-5b3ba7c40968.png)
 ![image](https://user-images.githubusercontent.com/93119897/228533652-cfce6545-b583-48ab-a2ea-145e40739f02.png)

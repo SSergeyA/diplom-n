@@ -287,19 +287,18 @@ kubectl -n jenkins create secret generic sergey-local \
 6. В GitHub создаем Webhook для сборки приложения по коммиту.
 ![image](https://user-images.githubusercontent.com/93119897/228533428-8637cfd2-b6d8-416d-8838-2945f465547a.png)
 
-Цель:
+#### Ожидаемый результат:
 
-1. Автоматическая сборка docker образа при коммите в репозиторий с тестовым приложением.
-2. Автоматический деплой нового docker образа.
-
-Можно использовать [teamcity](https://www.jetbrains.com/ru-ru/teamcity/), [jenkins](https://www.jenkins.io/) либо [gitlab ci](https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/)
-
-Ожидаемый результат:
-
-1. Интерфейс ci/cd сервиса доступен по http.
-2. При любом коммите в репозиторие с тестовым приложением происходит сборка и отправка в регистр Docker образа.
-3. При создании тега (например, v1.0.0) происходит сборка и отправка с соответствующим label в регистр, а также деплой соответствующего Docker образа в кластер Kubernetes.
-
+##### 1. Интерфейс ci/cd сервиса доступен по http . [Jenkins](http://130.193.38.198:32000)
+##### 2. При любом коммите в репозиторие с тестовым приложением происходит сборка и отправка в регистр Docker образа.
+ Создаю коммит без тега и отправляю его в репозиторий  
+![image](https://user-images.githubusercontent.com/93119897/228536764-e976bcaf-3c70-4f9a-8cce-2b4c8966cf6f.png)
+Запускается job  
+![image](https://user-images.githubusercontent.com/93119897/228536972-a899f5bc-3e19-41f5-b4cf-5a7686dc5b11.png)
+Создается образ  
+file:///home/sergey/Pictures/Screenshot%20from%202023-03-29%2015-30-37.png![image](https://user-images.githubusercontent.com/93119897/228537143-0f1e39fe-7ed1-4aa9-940b-c45370dccbfc.png)
+##### 3. При создании тега (например, v1.0.0) происходит сборка и отправка с соответствующим label в регистр, а также деплой соответствующего Docker образа в кластер Kubernetes.  
+ Создаю коммит без тега и отправляю его в репозиторий  
 ---
 ## Что необходимо для сдачи задания?
 

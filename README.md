@@ -178,6 +178,8 @@
 ![image](https://user-images.githubusercontent.com/93119897/225693442-977cd46f-21eb-47aa-9b0c-6a4f1856c2b7.png)
 2. В  [Terraform Cloud](https://app.terraform.io/app/SSergeyA/workspaces/stage) создал workspace *stage*.
 ![image](https://user-images.githubusercontent.com/93119897/228467028-a2cdfcfe-dd1a-4852-b4d0-74ffe82af75c.png)
+![image](https://user-images.githubusercontent.com/93119897/228473129-7df3bdb7-758d-44bf-be67-e59483344629.png)
+
 3. Создал VPC с подсетями в разных зонах доступности. Убедился, что  команды `terraform destroy` и `terraform apply` выполняются без дополнительных ручных действий.
 ![image](https://user-images.githubusercontent.com/93119897/228467743-29c0a2cd-d805-401a-a2fe-1c6f1b6a8bb9.png)
 ![image](https://user-images.githubusercontent.com/93119897/228467785-0022ac3b-93ba-420c-b291-859ff8791228.png)
@@ -194,7 +196,7 @@ Terraform сконфигурирован и создание инфрастру�
 ![image](https://user-images.githubusercontent.com/93119897/228468744-8e8bf8a4-61fc-451b-b1d5-19d27576c80c.png)
 ![image](https://user-images.githubusercontent.com/93119897/228468553-dfe93528-d7ac-491d-b0ce-7d20c1fbc29c.png)
 
-2. Подготовил свои конфигурации Kubespray.  Указал конфигурацибю кластера в hosts.yaml для билдера. Для доступа к кластеру извне нужно добавил параметр
+2. Подготовил свои конфигурации Kubespray.  Указал конфигурациб кластера в hosts.yaml для билдера. Для доступа к кластеру извне нужно добавил параметр
 `supplementary_addresses_in_ssl_keys: в файл k8s-cluster.yml
 ![image](https://user-images.githubusercontent.com/93119897/228469277-7833dfd8-e46a-47f9-a7d7-d3fa065b29f2.png)
 ![image](https://user-images.githubusercontent.com/93119897/228470191-4f26f986-4e2b-4910-9264-1370772cad66.png)
@@ -202,7 +204,7 @@ Terraform сконфигурирован и создание инфрастру�
 ![image](https://user-images.githubusercontent.com/93119897/228470492-6859a195-1892-40cc-bc5a-76fad96d087e.png)
 ![image](https://user-images.githubusercontent.com/93119897/228470591-0b582a25-ad11-43d3-9093-8ba6fdc509a7.png)
 ![image](https://user-images.githubusercontent.com/93119897/228470740-d37f89f8-c121-483a-9a57-c94aae2903fd.png)
-4. Скопировал конфиг  создал контекст на свою машину 
+4. Скопировал конфиг  создал контекст на свою машину. Проверил команду `kubectl get pods --all-namespaces`
 ![image](https://user-images.githubusercontent.com/93119897/228471132-cc6179b7-7261-46b4-b787-0ac859e4278d.png)
 
 
@@ -210,5 +212,5 @@ Terraform сконфигурирован и создание инфрастру�
 Ожидаемый результат:
 
 1. Работоспособный Kubernetes кластер.
-2. В файле `~/.kube/config` находятся данные для доступа к кластеру.
+2. В файле [`~/.kube/config`](https://github.com/SSergeyA/diplom-n/blob/main/Kubernetes/config)  находятся данные для доступа к кластеру. 
 3. Команда `kubectl get pods --all-namespaces` отрабатывает без ошибок.

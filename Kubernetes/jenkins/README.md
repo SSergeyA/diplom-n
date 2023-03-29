@@ -1,7 +1,6 @@
 # Jenkins
 
-Деплой одного экземпляра Jenkins со встроенным модулем
-kubernetes.
+Деплой одного экземпляра Jenkins 
 
 
 ## Добавляем namespace
